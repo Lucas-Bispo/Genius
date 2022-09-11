@@ -15,4 +15,22 @@ public class Sons {
 
     }
 
+    // inicia a musica selecionada pelo metodo escolheMusica
+    public void iniciar() {
+        try {
+            this.trocar = MidiSystem.getSequencer();
+            this.trocar.open();
+            this.trocar.setSequence(this.som);
+            this.trocar.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // para a musica que esiver tocando
+    public void parar() {
+        this.trocar.stop();
+        this.trocar.close();
+    }
+
 }
