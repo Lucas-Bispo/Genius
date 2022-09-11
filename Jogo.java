@@ -38,4 +38,30 @@ public class Jogo extends JFrame {
     // saber se o usuario ainda pode jogar
     private boolean jogoAtivo = true;
 
+    public Jogo() {
+        // define o nome da barra de titulo da janela
+        super("Genius - Jogo");
+        // define o Layout do conteiner (null permite que eu mesmo posicione os
+        // graficos)
+        setLayout(null);
+        // define o tamanho da janela\
+        setSize(550, 485);
+        // informa que a posicao inicial da janela centralizada
+        setLocationRelativeTo(null);
+        // define que nao pode ser redefinido a tela
+        setResizable(false);
+        // define como visivel
+        setVisible(true);
+        // troca a musica de tela aberta
+        musica.escolheMusica("abertura");
+        musica.iniciar();
+    }
+
+    // monta a tela de abertura do jogo
+    public void tela_abertura() {
+
+        // adiciona a imagem de fundo
+
+    }
+
 }
